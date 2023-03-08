@@ -10,6 +10,14 @@
       "StackName": "amplify-pfggeapp-dev-163424",
       "StackId": "arn:aws:cloudformation:eu-west-1:291311682549:stack/amplify-pfggeapp-dev-163424/b5564ea0-bdc6-11ed-b2e0-02449388110b",
       "AmplifyAppId": "d1mmisth19p6o2"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1mmisth19p6o2",
+          "type": "cicd"
+        }
+      }
     }
   }
 }
