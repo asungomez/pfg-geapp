@@ -34,6 +34,7 @@
     "@testing-library/cypress": "^9.0.0",
     "@types/accept-language-parser": "^1.5.3",
     "@types/testing-library__cypress": "^5.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
     "cypress": "^12.7.0",
     "cypress-failed-log": "^2.10.0",
     "eslint": "8.35.0",

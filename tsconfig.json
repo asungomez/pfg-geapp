@@ -30,7 +30,8 @@
     "**/*.tsx",
     "./*.ts",
     "./.next/types/**/*.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "/Users/maria.gomezcastro/Personal/newgeapp/geapp/.next/types/**/*.ts"
   ],
   "exclude": ["node_modules"],
   "types": ["cypress", "node", "@testing-library/cypress"]
