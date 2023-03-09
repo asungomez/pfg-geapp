@@ -2,6 +2,7 @@ import { getTranslator, ValidLanguage } from '@/i18n';
 import { usePathname } from 'next/navigation';
 import { FC, ReactNode, useMemo } from 'react';
 import { I18nContext } from './I18nContext';
+import { dictionaries as defaultDictionaries } from '@/dictionaries';
 
 type I18nProviderProps = {
   children: ReactNode;
@@ -19,8 +20,9 @@ export const I18nProvider: FC<I18nProviderProps> = ({
   );
 
   const contextValue = useMemo(() => {
+    const defaultDictionary = defaultDictionaries[language];
     const dictionary = dictionaries[language];
-    const translator = getTranslator(dictionary);
+    const translator = getTranslator({ ...defaultDictionary, ...dictionary });
     return { t: translator, currentLanguage: language };
   }, [language, dictionaries]);
 

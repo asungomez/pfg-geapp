@@ -22,12 +22,11 @@ export const getLocalePartsFrom = ({ pathname, locale }: LocaleSource) => {
       lang: localeParts[0],
       country: localeParts[1],
     };
-  } else {
-    const pathnameParts = pathname!.toLowerCase().split('/');
-    return {
-      lang: pathnameParts[1],
-    };
   }
+  const pathnameParts = pathname!.toLowerCase().split('/');
+  return {
+    lang: pathnameParts[1],
+  };
 };
 
 export const getTranslator = (dictionary: any) => {
