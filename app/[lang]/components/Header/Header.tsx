@@ -1,6 +1,7 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import { FC } from 'react';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
+import { AuthMenu } from './AuthMenu/AuthMenu';
 
 export const Header: FC = () => {
   return (
@@ -15,9 +16,10 @@ export const Header: FC = () => {
     >
       <Flex align="center">Geapp</Flex>
       <Box flexBasis="auto">
-        <Flex align="center" justify="space-between" direction="row" pt={4}>
+        <HStack spacing="24px">
           <LanguageSelector />
-        </Flex>
+          <AuthMenu />
+        </HStack>
       </Box>
     </Flex>
   );

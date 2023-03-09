@@ -1,4 +1,24 @@
 {
+  "auth": {
+    "pfggeapp": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": ["SMS"],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": ["EMAIL"],
+        "socialProviders": ["GOOGLE"],
+        "usernameAttributes": ["EMAIL"],
+        "verificationMechanisms": ["EMAIL"]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
       "lastPushTimeStamp": "2023-03-08T15:38:15.345Z",
@@ -7,6 +27,14 @@
     }
   },
   "parameters": {
+    "AMPLIFY_auth_pfggeapp_googleClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "pfggeapp"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {

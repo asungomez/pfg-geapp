@@ -17,6 +17,11 @@
           "appId": "d1mmisth19p6o2",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "pfggeapp": {
+          "googleClientId": "852627025664-l9sj93eedr82aiuhplebir3rti8p1o4s.apps.googleusercontent.com"
+        }
       }
     }
   }
