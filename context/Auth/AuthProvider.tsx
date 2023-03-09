@@ -1,3 +1,4 @@
+import { useAmplify } from '@/hooks/useAmplify';
 import {
   CognitoUserWithAttributes,
   getAuthenticatedUser,
@@ -15,6 +16,7 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     'checking' | 'authenticated' | 'unauthenticated'
   >('checking');
   const [user, setUser] = useState<CognitoUserWithAttributes | null>(null);
+  useAmplify();
 
   useEffect(() => {
     if (authStatus === 'checking') {

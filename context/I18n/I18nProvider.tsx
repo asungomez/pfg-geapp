@@ -1,11 +1,11 @@
-import { defaultLocale, getTranslator, ValidLanguage } from '@/i18n';
+import { getTranslator, ValidLanguage } from '@/i18n';
 import { usePathname } from 'next/navigation';
 import { FC, ReactNode, useMemo } from 'react';
 import { I18nContext } from './I18nContext';
 
 type I18nProviderProps = {
   children: ReactNode;
-  dictionaries: { [language in ValidLanguage]: any };
+  dictionaries: { [language in ValidLanguage]: Record<string, string> };
 };
 
 export const I18nProvider: FC<I18nProviderProps> = ({
@@ -13,8 +13,10 @@ export const I18nProvider: FC<I18nProviderProps> = ({
   dictionaries,
 }) => {
   const pathname = usePathname();
-  const language = (pathname?.split('/')[1] ||
-    defaultLocale.split('-')[0]) as ValidLanguage;
+  const language = useMemo(
+    () => pathname?.split('/')[1] as ValidLanguage,
+    [pathname],
+  );
 
   const contextValue = useMemo(() => {
     const dictionary = dictionaries[language];
