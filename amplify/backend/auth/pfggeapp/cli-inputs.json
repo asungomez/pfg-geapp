@@ -37,7 +37,7 @@
     "hostedUIDomainName": "pfggeapp",
     "authProvidersUserPool": ["Google"],
     "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "userPoolGroupList": [],
+    "userPoolGroupList": ["Admin", "Editor"],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true,
@@ -49,10 +49,11 @@
     },
     "breakCircularDependency": true,
     "dependsOn": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/es/\",\"http://localhost:3000/en/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/es/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/en/\"],\"LogoutURLs\":[\"http://localhost:3000/es/\",\"http://localhost:3000/en/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/es/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/en/\"]}",
     "parentStack": {
       "Ref": "AWS::StackId"
     },
-    "permissions": []
+    "permissions": [],
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/es/\",\"http://localhost:3000/en/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/es/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/en/\"],\"LogoutURLs\":[\"http://localhost:3000/es/\",\"http://localhost:3000/en/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/es/\",\"https://main.d1mmisth19p6o2.amplifyapp.com/en/\"]}",
+    "adminQueryGroup": "Admin"
   }
 }

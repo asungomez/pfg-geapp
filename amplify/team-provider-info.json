@@ -21,7 +21,17 @@
       "auth": {
         "pfggeapp": {
           "googleClientId": "852627025664-l9sj93eedr82aiuhplebir3rti8p1o4s.apps.googleusercontent.com"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "AdminQueries7a677cc0": {
+          "deploymentBucketName": "amplify-pfggeapp-dev-163424-deployment",
+          "s3Key": "amplify-builds/AdminQueries7a677cc0-6d4b364f4e70727a6771-build.zip"
         }
+      },
+      "api": {
+        "AdminQueries": {}
       }
     }
   }
